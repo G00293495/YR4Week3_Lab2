@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegisterController {
     @PostMapping("/confirm")
     public String confirmDetails(@RequestBody UserDetails userDetails){
-        String confirmationMessage = String.format("Recieved details for %s with email %s",
-                userDetails.getName(), userDetails.getEmail());
+        String confirmationMessage = String.format("Recieved details for %s with email %s", userDetails.getName(), userDetails.getEmail());
         return confirmationMessage;
     }
 }
